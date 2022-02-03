@@ -65,4 +65,6 @@ Existem erros comprometendo o programa, em `console.log(parseInt(args[0]) + pars
 
 R: Com o comando `git checkout -b staging` cria-se a branch staging, onde pode-se desenvolver testes e alterações paralelamente ao branch main, e com o comando "git push origin staging", empurra a nova branch para o repostiório remoto.
 
+### 8 - Agora que a sua divisão está funcionando e você garantiu que não afetou as outras funções, você está apto a fazer um merge request Em seu gitlab, descubra como realizá-lo de acordo com o gitflow.
+
 

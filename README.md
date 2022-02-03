@@ -67,4 +67,27 @@ R: Com o comando `git checkout -b staging` cria-se a branch staging, onde pode-s
 
 ### 8 - Agora que a sua divisão está funcionando e você garantiu que não afetou as outras funções, você está apto a fazer um merge request Em seu gitlab, descubra como realizá-lo de acordo com o gitflow.
 
+R: Para realizar o merge, dentro da branch master, executa-se o seguinte comando `git merge "nome-da-branch"`, após isso basta adicionar, comitar e executar o push. Caso ocorra conflitos entre os repositorios, executa-se antes o comando `git pull`, alinhando, dessa forma, ambos os arquivos locais e remotos, deixando tudo pronto para o merge entre a branch principal e secundaria.
+
+### 9 - João quis se redimir dos pecados e fez uma melhoria em seu código, mas ainda assim, continuou fazendo um push na master, faça a seguinte alteração no código e fez o commit com a mensagem: "refactor: calculator abstraction"
+
+```js
+var x = args[0];
+var y = args[2];
+var operator = args[1];
+
+function evaluate(param1, param2, operator) {
+  return eval(param1 + operator + param2);
+}
+
+if ( console.log( evaluate(x, y, operator) ) ) {}
+```
+
+### Para piorar a situação, joão não te contou como executar esse novo código, enquanto você não descobre como executá-lo lendo o código, e seu chefe não descobriu que tudo está comprometido, faça um revert através do seu gitlab para que o produto volte ao normal o quanto antes!
+
+R: Nesse caso basta utilizar o comando `git revert`. Este comando é usado para desfazer alterações ao histórico de commits do repositório, resolvendo o problema.
+
+### 10 - Descubra como executar esse novo código e que operações ele é capaz de realizar. Deixe sua resposta aqui, e explique o que essas funções javascript fazem.
+
+R: A função Eval avalia o expressão de cadeia de caracteres e retorna seu valor. Por exemplo, Eval("1 + 1") retorna 2. Se você passar para a função Eval uma cadeia de caracteres que contém o nome de uma função, a função Eval retornará o valor de retorno da função.
 

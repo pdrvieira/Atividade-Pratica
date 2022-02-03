@@ -61,4 +61,8 @@ switch (args[0]) {
 
 Existem erros comprometendo o programa, em `console.log(parseInt(args[0]) + parseInt(args[1]));` os valores do index deveriam ser 1 e 2, pois o valor 0, será assumido pelas entradas "soma" ou "sub" da estrutura Switch-Case. E também, na ultima linha `console.log('does not support', arg[0]);` deveria estar `console.log('does not support', args[0]);` para que haja concordancia entre as variáveis.
 
+### 7. Por causa de joãozinho, você foi obrigado a fazer correções na sua branch principal! O produto foi pro saco e a empresa perdeu muito dinheiro porque não conseguiu fazer as suas contas, graças a isso o seu chefe ficou bem bravo e mandou você dar um jeito disso nunca acontecer. Aprenda a criar uma branch, e desenvolva a feature de divisão nessa branch.
 
+R: Com o comando `git checkout -b staging` cria-se a branch staging, onde pode-se desenvolver testes e alterações paralelamente ao branch main, e com o comando "git push origin staging", empurra a nova branch para o repostiório remoto.
+
+### 8 - Agora que a sua divisão está funcionando e você garantiu que não afetou as outras funções, você está apto a fazer um merge request Em seu gitlab, descubra como realizá-lo de acordo com o gitflow.

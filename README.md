@@ -12,7 +12,7 @@ R: `process.argv` é uma matriz que contém os argumentos da linha de comando. O
 
 ### 4 - Agora que você já tem um código feito e a resposta aqui, você precisa subir isso para seu repositório. Sem usar git add . descubra como adicionar apenas um arquivo ao seu histórico de commit e adicione calculadora.js a ele. Que tipo de commit esse código deve ter de acordo ao conventional commit. Que tipo de commit o seu README.md deve contar de acordo ao conventional commit. Por fim, faça um push desse commit.
 
-R: O comando git add . adiciona todos os untrackeds da working directory para a stage area, porem com o comando git add "nome do file" é possível adiciona-los de forma individual, por exemplo: `git add "calculadora.js"`. No caso do commit da calculadora por tratar-se de adições de novas funcionalidades ou de quaisquer outras novas implantações ao código, usa-se o tipo `feat`. E no caso do README, por referir-se a uma inclusão ou alteração somente de arquivos de documentação, usa-se o tipo `docs`
+R: O comando git add . adiciona todos os untrackeds da working directory para a stage area, porem com o comando git add "nome do file" é possível adiciona-los de forma individual, por exemplo: `git add "calculadora.js"`. No caso do commit da calculadora por tratar-se de adições de novas funcionalidades ou de quaisquer outras novas implantações ao código, usa-se o tipo `feat`. E no caso do README, por referir-se a uma inclusão ou alteração somente de arquivos de documentação, usa-se o tipo `docs`.
 
 ### 5. Copie e cole o código abaixo em sua calculadora.js:
 
@@ -28,6 +28,37 @@ soma();
 
 ### Descubra o que essa mudança representa em relação ao conventional commit e faça o devido commit dessa mudança.
 
-R: Em relação aos padrões de commit, considerando que houveram alterações no código, mas manteve-se a função, deve-se usar o tipo `refactor`
+R: Em relação aos padrões de commit, considerando que houveram alterações no código, mas manteve-se a função, deve-se usar o tipo `refactor`.
+
+### 6 - João entrou em seu repositório e o deixou da seguinte maneira:
+
+```js
+const soma = () => {
+    console.log(parseInt(args[0]) + parseInt(args[1]));
+};
+
+const sub = () => {
+    console.log(parseInt(args[0]) - parseInt(args[1]));  
+}
+
+const args = process.argv.slice(2);
+
+switch (args[0]) {
+    case 'soma':
+        soma();
+    break;
+
+    case 'sub':
+        sub();
+    break;
+
+    default:
+        console.log('does not support', arg[0]);
+}
+```
+
+### Depois disso, realizou um git add . e um commit com a mensagem: "Feature: added subtraction" faça como ele e descubra como executar o seu novo código. Nesse código, temos um pequeno erro, encontre-o e corrija para que a soma e divisão funcionem. Por fim, commit sua mudança.
+
+Existem erros comprometendo o programa, em `console.log(parseInt(args[0]) + parseInt(args[1]));` os valores do index deveriam ser 1 e 2, pois o valor 0, será assumido pelas entradas "soma" ou "sub" da estrutura Switch-Case. E também, na ultima linha `console.log('does not support', arg[0]);` deveria estar `console.log('does not support', args[0]);` para que haja concordancia entre as variáveis.
 
 
